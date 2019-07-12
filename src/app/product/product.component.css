@@ -1,0 +1,14 @@
+img {
+    height: 20%;
+    width: auto;
+  }
+  
+  td {
+    margin: 2px;
+  }
+  
+  table {
+    width: 100%;
+    border-style: solid;
+  }
+  

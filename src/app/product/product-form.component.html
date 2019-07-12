@@ -1,0 +1,24 @@
+<div class="main">
+        <h2>Add Product</h2>
+        <div class="join-party-form">
+            <div class="form-line">
+                <label>Product Name </label>
+                <input [(ngModel)]="productName"><br>
+                <label>Product Code </label>
+                <input [(ngModel)]="productCode"><br>
+                <label>Release Date </label>
+                <input [(ngModel)]="releaseDate"><br>
+                <label>Description</label>
+                <input [(ngModel)]="description"><br>
+                <label>Price </label>
+                <input [(ngModel)]="price"><br>
+                <label>Product Rating </label>
+                <input [(ngModel)]="starRating"><br>
+                <label>Product Img Url </label>
+                <input [(ngModel)]="imageUrl"><br>
+                <br />
+            </div>
+            <button (click)="onAddNewProduct()">Add Products</button>
+        </div>
+    </div>
+    
