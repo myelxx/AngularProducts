@@ -1,9 +1,7 @@
 <div >
     <h1> {{name}} </h1>
     <button (click)="toggleImage()">Toggle Image</button>
-
     <input [(ngModel)]="searchString" >
-    <button (click)="filterProducts()">Search</button>
     <ng-container *ngIf="products && products.length; else noProducts">
         <table>
             <thead>
@@ -16,9 +14,9 @@
                     <th>Rating</th>
                 </tr>
             </thead>
-            <tbody *ngFor="let product of products">
+            <tbody *ngFor="let product of displayProducts()">
                 <tr>
-                    <td> <img *ngIf="isVisible" [src]='product.imageUrl'> </td>
+                    <td> <img *ngIf="isVisible"[src]='product.imageUrl'> </td>
                     <td> {{product.productName | uppercase}} </td>
                     <td> {{product.productCode}} </td>
                     <td> {{product.releaseDate }} </td>
@@ -27,6 +25,7 @@
                 </tr>
             </tbody>
         </table>
+        
     </ng-container>
 
     <ng-template #noProducts>

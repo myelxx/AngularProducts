@@ -68,7 +68,7 @@ export class ProductComponent implements OnInit {
     }
     //#endregion  
   ]
-  isVisible: boolean = false;
+  isVisible: boolean = true;
   searchString: string = "";
   filteredProducts: any[];
 
@@ -87,19 +87,4 @@ export class ProductComponent implements OnInit {
       || p.price.toString().includes(this.searchString)
       || p.starRating.toString().includes(this.searchString))
   }
-
-  filterProducts() {
-    if (this.searchString != "") {
-      this.filteredProducts = [];
-      this.products.forEach(element => {
-        this.filteredProducts.push(this.products.filter((p) => p.productName.toLowerCase().includes(this.searchString)));
-      });
-    } else {
-      this.filteredProducts = [];
-      this.products.forEach(element => {
-        this.filteredProducts.push(this.products.filter((p) => p.productName.toLowerCase().includes(this.searchString)));
-      });
-    }
-  }
-
 }
